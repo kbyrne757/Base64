@@ -3,15 +3,24 @@
 
 import base64
 
-userInput = input("Enter string to convert to base64: ")
-userInputAscii = userInput.encode('ascii')
-base64Encoding = base64.b64encode(userInputAscii)
-base64Complete = base64Encoding.decode('ascii')
+decision = input("Would you like to encode or decode Base64? (encode/decode) ")
 
-print(base64Complete)
+if (decision == 'encode'):
+    #base64 Encoding
+    userInput = input("Enter string to convert to base64: ")
+    userInputAscii = userInput.encode('ascii')
+    base64Encoding = base64.b64encode(userInputAscii)
+    base64Complete = base64Encoding.decode('ascii')
 
-#base64 Decoding
+    print(base64Complete)
 
-userInputDecode = base64.b64decode(base64Complete)
-userOutput = userInputDecode.decode('ascii')
-print (userOutput)
+elif (decision == 'decode'):
+    #base64 Decoding
+    userInput = input("Enter string to convert to base64: ")
+    userInputDecode = base64.b64decode(userInput)
+    userOutput = userInputDecode.decode('ascii')
+    print (userOutput)
+    
+
+
+    
