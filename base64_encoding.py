@@ -13,5 +13,5 @@ print(base64Complete)
 #base64 Decoding
 
 userInputDecode = base64.b64decode(base64Complete)
-userInputyeet = userInputDecode.decode('ascii')
-print (userInputyeet)
+userOutput = userInputDecode.decode('ascii')
+print (userOutput)
